@@ -3,3 +3,4 @@ litfind/
 readswarm/
 .env
 *.zip
+!claude-app/zips/*.zip

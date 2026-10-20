@@ -187,8 +187,8 @@ Never revise sentences before the structure is settled, because most of those se
 Between passes 1 and 2, read only the figures, captions, and the first and last sentence of each section.
 If the argument does not survive that reading, the problem is structural.
 
-Before calling a draft done, review it with the `referee-review` skill, ideally in a fresh chat that sees
-only the draft.
+Before calling a draft done, review it with the `reviewers` plugin from this marketplace if it is
+installed.
 
 ---
 Ban list adapted in part from BootLoops prose-lint by Matthew D. Schwartz (CC BY 4.0).
