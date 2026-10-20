@@ -1,0 +1,15 @@
+{
+  "name": "reviewers",
+  "version": "0.1.0",
+  "description": "Referee-style review of research in progress or a finished draft: 2-3 reviewer agents with different angles tell the story the work could tell and give every item a verdict; a hook checks every quote they cite.",
+  "author": {
+    "name": "Jorin Overwiening"
+  },
+  "license": "MIT",
+  "keywords": [
+    "review",
+    "referee",
+    "research",
+    "papers"
+  ]
+}

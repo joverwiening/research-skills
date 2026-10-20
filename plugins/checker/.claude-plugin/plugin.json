@@ -1,0 +1,15 @@
+{
+  "name": "checker",
+  "version": "0.1.0",
+  "description": "Check claims, numbers and captions against the raw sources before they are trusted: a checker agent cites file:line for every objection and a hook confirms each quote is in the file.",
+  "author": {
+    "name": "Jorin Overwiening"
+  },
+  "license": "MIT",
+  "keywords": [
+    "fact-check",
+    "verification",
+    "research",
+    "claims"
+  ]
+}

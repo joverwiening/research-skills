@@ -1,0 +1,22 @@
+{
+  "description": "checker agent: refuse a dispatch with no artifact file, re-ask once for schema-valid JSON and quotes that are in the cited files, show the main agent which objections are backed",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Agent|Task",
+        "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/review-hooks.mjs\" checker pre", "timeout": 10 }]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/review-hooks.mjs\" checker stop", "timeout": 10 }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Agent|Task",
+        "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/review-hooks.mjs\" checker post", "timeout": 10 }]
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "research-skills",
+  "description": "Skills, agents and hooks for doing research with Claude: literature search, writing rules, referee review, claim checking.",
+  "owner": {
+    "name": "Jorin Overwiening"
+  },
+  "plugins": [
+    {
+      "name": "lit-search",
+      "description": "Literature search on OpenAlex and arXiv with citation chasing, then a swarm of small model calls reads the top papers' full text and returns verbatim quotes that code checks against the text.",
+      "author": {
+        "name": "Jorin Overwiening"
+      },
+      "source": "./plugins/lit-search",
+      "category": "research"
+    },
+    {
+      "name": "writing-rules",
+      "description": "Rules for prose a reader judges (papers, essays, grant text): reader first, structure, sentence tests, a ban list of persuasion and AI-tell words, and a lint that runs after every .tex/.md write.",
+      "author": {
+        "name": "Jorin Overwiening"
+      },
+      "source": "./plugins/writing-rules",
+      "category": "research"
+    },
+    {
+      "name": "reviewers",
+      "description": "Referee-style review of research in progress or a finished draft: 2-3 reviewer agents with different angles tell the story the work could tell and give every item a verdict; a hook checks every quote they cite.",
+      "author": {
+        "name": "Jorin Overwiening"
+      },
+      "source": "./plugins/reviewers",
+      "category": "research"
+    },
+    {
+      "name": "checker",
+      "description": "Check claims, numbers and captions against the raw sources before they are trusted: a checker agent cites file:line for every objection and a hook confirms each quote is in the file.",
+      "author": {
+        "name": "Jorin Overwiening"
+      },
+      "source": "./plugins/checker",
+      "category": "research"
+    }
+  ]
+}
