@@ -1,7 +1,7 @@
 {
   "name": "lit-search",
   "version": "0.1.0",
-  "description": "Literature search on OpenAlex and arXiv with citation chasing, then a swarm of small model calls reads the top papers' full text and returns verbatim quotes that code checks against the text.",
+  "description": "Literature search on OpenAlex and arXiv that follows citations. A small model reads the top papers in full, and code checks every quote it returns against the paper.",
   "author": {
     "name": "Jorin Overwiening"
   },
@@ -13,5 +13,7 @@
     "openalex",
     "arxiv",
     "citations"
-  ]
+  ],
+  "homepage": "https://github.com/joverwiening/research-skills",
+  "repository": "https://github.com/joverwiening/research-skills"
 }

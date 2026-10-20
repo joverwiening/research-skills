@@ -1,7 +1,7 @@
 {
   "name": "reviewers",
   "version": "0.1.0",
-  "description": "Referee-style review of research in progress or a finished draft: 2-3 reviewer agents with different angles tell the story the work could tell and give every item a verdict; a hook checks every quote they cite.",
+  "description": "Two or three reviewer agents read research in progress or a draft and give every item a verdict such as fix, develop or cut. A hook checks every quote they cite.",
   "author": {
     "name": "Jorin Overwiening"
   },
@@ -11,5 +11,7 @@
     "referee",
     "research",
     "papers"
-  ]
+  ],
+  "homepage": "https://github.com/joverwiening/research-skills",
+  "repository": "https://github.com/joverwiening/research-skills"
 }

@@ -1,6 +1,6 @@
 ---
 name: lit-search
-description: Literature search with web search — "what's known about X", "find papers on", "lit review", "is this new", "citations for". Several phrasings per question, citation chasing from the best hits, and no paper cited without a passage read in it. SKIP for quick web facts.
+description: Literature search with web search. Use for "what's known about X", "find papers on", "lit review", "is this new", "citations for". Several phrasings per question, citation chasing from the best hits, and no paper cited without a passage read in it. SKIP for quick web facts.
 ---
 
 # Literature search

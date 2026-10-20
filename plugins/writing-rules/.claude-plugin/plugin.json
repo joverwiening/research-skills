@@ -1,7 +1,7 @@
 {
   "name": "writing-rules",
   "version": "0.1.0",
-  "description": "Rules for prose a reader judges (papers, essays, grant text): reader first, structure, sentence tests, a ban list of persuasion and AI-tell words, and a lint that runs after every .tex/.md write.",
+  "description": "Rules for papers, grant text and essays, with a lint for words that tell the reader how to feel. The lint runs after every write to a .tex or .md file.",
   "author": {
     "name": "Jorin Overwiening"
   },
@@ -12,5 +12,7 @@
     "essays",
     "style",
     "lint"
-  ]
+  ],
+  "homepage": "https://github.com/joverwiening/research-skills",
+  "repository": "https://github.com/joverwiening/research-skills"
 }

@@ -1,6 +1,6 @@
 ---
 name: checker
-description: Check claims against their sources before they are trusted, sent or published — a number, a result, a caption, a sentence in a draft. For "is this right?", "are you sure?", "double check this", "the numbers don't match". Every objection quotes the source verbatim with its location. SKIP for judging whether the work is good or what to cut (use referee-review).
+description: Check claims (a number, a result, a caption, a sentence in a draft) against their sources before they are trusted, sent or published. For "is this right?", "are you sure?", "double check this", "the numbers don't match". Every objection quotes the source verbatim with its location. SKIP for judging whether the work is good or what to cut (use referee-review).
 ---
 
 # Checker

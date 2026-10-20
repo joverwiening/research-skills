@@ -1,16 +1,14 @@
 ---
 name: checker
-description: Check claims before they are sent, saved or published — a result, a number, a caption, a sentence in a paper — against the raw sources. Use when the user doubts something ("is this right?", "are you sure?", "the numbers don't match", "wasn't it X before?", "double check this") and before a result goes into a report, a paper or a commit message. A checker agent re-reads or recomputes each claim and cites file:line for every objection; a hook confirms each quote is in the file. SKIP for judging whether work is good enough or what to cut (use reviewers) and for code review.
+description: Check claims (a result, a number, a caption, a sentence in a paper) against the raw sources before they are sent, saved or published. Use when the user doubts something ("is this right?", "are you sure?", "the numbers don't match", "wasn't it X before?", "double check this") and before a result goes into a report, a paper or a commit message. A checker agent re-reads or recomputes each claim and cites file:line for every objection; a hook confirms each quote is in the file. SKIP for judging whether work is good enough or what to cut (use reviewers) and for code review.
 ---
 
 # Checker
 
-Re-reading your own message is a poor check: it reads the claim the way you wrote it. A separate agent
-that opens the sources and must quote them catches more. In our lab's replay of 146 corrections a user
-made to an agent's claims, a checker that was given the project's notes caught 18 % of them; the agent
-re-reading its own message caught 6 %, and a checker without the notes caught 5 %. So the notes are the
-mechanism. Most misses were real numbers taken from the wrong run or setup, and earlier results the
-claim ignored.
+Re-reading your own message is a poor check, because you read the claim the way you wrote it. In our
+lab's replay of 146 corrections a user made to an agent's claims, a checker given the project's notes
+caught 18 % of them, a checker without the notes 5 %, and the agent re-reading its own message 6 %. The
+largest gain was on earlier results the claim had ignored, so always give the checker the notes.
 
 ## 1. Write the artifact
 

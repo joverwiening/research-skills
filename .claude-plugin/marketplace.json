@@ -1,14 +1,14 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "research-skills",
-  "description": "Skills, agents and hooks for doing research with Claude: literature search, writing rules, referee review, claim checking.",
+  "description": "Claude Code plugins for research: literature search, claim checking, referee-style review and writing rules.",
   "owner": {
     "name": "Jorin Overwiening"
   },
   "plugins": [
     {
       "name": "lit-search",
-      "description": "Literature search on OpenAlex and arXiv with citation chasing, then a swarm of small model calls reads the top papers' full text and returns verbatim quotes that code checks against the text.",
+      "description": "Literature search on OpenAlex and arXiv that follows citations. A small model reads the top papers in full, and code checks every quote it returns against the paper.",
       "author": {
         "name": "Jorin Overwiening"
       },
@@ -17,7 +17,7 @@
     },
     {
       "name": "writing-rules",
-      "description": "Rules for prose a reader judges (papers, essays, grant text): reader first, structure, sentence tests, a ban list of persuasion and AI-tell words, and a lint that runs after every .tex/.md write.",
+      "description": "Rules for papers, grant text and essays, with a lint for words that tell the reader how to feel. The lint runs after every write to a .tex or .md file.",
       "author": {
         "name": "Jorin Overwiening"
       },
@@ -26,7 +26,7 @@
     },
     {
       "name": "reviewers",
-      "description": "Referee-style review of research in progress or a finished draft: 2-3 reviewer agents with different angles tell the story the work could tell and give every item a verdict; a hook checks every quote they cite.",
+      "description": "Two or three reviewer agents read research in progress or a draft and give every item a verdict such as fix, develop or cut. A hook checks every quote they cite.",
       "author": {
         "name": "Jorin Overwiening"
       },
@@ -35,7 +35,7 @@
     },
     {
       "name": "checker",
-      "description": "Check claims, numbers and captions against the raw sources before they are trusted: a checker agent cites file:line for every objection and a hook confirms each quote is in the file.",
+      "description": "A checker agent tests claims, numbers and captions against the files they came from. Each objection quotes a file and line, and a hook checks the quote.",
       "author": {
         "name": "Jorin Overwiening"
       },

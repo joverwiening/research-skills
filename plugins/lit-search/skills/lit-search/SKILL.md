@@ -1,6 +1,6 @@
 ---
 name: lit-search
-description: Literature search on real paper databases with full-text reading — "what's known about X", "find papers on", "lit review", "literature on", "who works on", "is this new", "citations for". Searches OpenAlex and arXiv with several phrasings, follows references and citers of the best hits, then many cheap model calls read the full text of the top papers and return verbatim quotes that code checks against the text. SKIP for one known paper (fetch it directly) and for quick web facts.
+description: Literature search on real paper databases with full-text reading. Use for "what's known about X", "find papers on", "lit review", "literature on", "who works on", "is this new", "citations for". Searches OpenAlex and arXiv with several phrasings, follows references and citers of the best hits, then many cheap model calls read the full text of the top papers and return verbatim quotes that code checks against the text. SKIP for one known paper (fetch it directly) and for quick web facts.
 ---
 
 # Literature search

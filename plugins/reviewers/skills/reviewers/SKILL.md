@@ -1,6 +1,6 @@
 ---
 name: reviewers
-description: Referee-style review of research work in progress or a finished draft — "review this", "is this promising", "is this going anywhere", "is this figure good", "is this result good enough", "what's missing", "review the draft", "judge the plan". Also before a figure or section goes into a paper and before a new round of experiments. Two stages, direction (work in progress) and final (draft or submission). 2-3 reviewer agents with different angles read the raw material, tell the story it could tell, and give every item a verdict. SKIP for checking whether one number or claim is correct (use checker) and for code review.
+description: Referee-style review of research work in progress or a finished draft. Use for "review this", "is this promising", "is this going anywhere", "is this figure good", "is this result good enough", "what's missing", "review the draft", "judge the plan". Also before a figure or section goes into a paper and before a new round of experiments. Two stages, direction (work in progress) and final (draft or submission). 2-3 reviewer agents with different angles read the raw material, tell the story it could tell, and give every item a verdict. SKIP for checking whether one number or claim is correct (use checker) and for code review.
 ---
 
 # Reviewers

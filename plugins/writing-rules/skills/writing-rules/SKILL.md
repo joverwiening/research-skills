@@ -1,6 +1,6 @@
 ---
 name: writing-rules
-description: Rules for drafting or revising prose a reader judges — papers, abstracts, grant text, essays, long posts, docs for a published repo. Reader first, structure, sentence tests, a ban list of persuasion and AI-tell words, and a lint script. Also for "does this read as AI". SKIP for chat, code comments, commit messages and scratch notes.
+description: Rules for drafting or revising prose a reader judges: papers, abstracts, grant text, essays, long posts, docs for a published repo. Reader first, structure, sentence tests, a ban list of persuasion and AI-tell words, and a lint script. Also for "does this read as AI". SKIP for chat, code comments, commit messages and scratch notes.
 ---
 
 # Writing rules
