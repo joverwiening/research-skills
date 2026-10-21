@@ -13,5 +13,7 @@
     "claims"
   ],
   "homepage": "https://github.com/joverwiening/research-skills",
-  "repository": "https://github.com/joverwiening/research-skills"
+  "repository": "https://github.com/joverwiening/research-skills",
+  "documentationUrl": "https://github.com/joverwiening/research-skills/tree/main/plugins/checker",
+  "supportUrl": "https://github.com/joverwiening/research-skills/issues"
 }

@@ -14,5 +14,7 @@
     "lint"
   ],
   "homepage": "https://github.com/joverwiening/research-skills",
-  "repository": "https://github.com/joverwiening/research-skills"
+  "repository": "https://github.com/joverwiening/research-skills",
+  "documentationUrl": "https://github.com/joverwiening/research-skills/tree/main/plugins/writing-rules",
+  "supportUrl": "https://github.com/joverwiening/research-skills/issues"
 }
