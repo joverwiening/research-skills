@@ -26,6 +26,10 @@ terms, paper identifiers and paper text to these services:
   the Anthropic API with `ANTHROPIC_API_KEY`.
 
 Results go to `litfind/` and `readswarm/` in the working directory, downloaded papers to a cache in the
-system temp folder.
+system temp folder. A downloaded PDF is read as data by your local `pdftotext` (or the binary named in
+`GETPAPER_PDFTOTEXT`); nothing that is downloaded is ever executed.
+
+The API keys are read from the environment or a `.env` file because Claude runs these scripts through
+its shell, and plugin settings are not passed to commands run there.
 
 MIT license.
