@@ -1,6 +1,6 @@
 {
   "name": "writing-rules",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rules for papers, grant text and essays, with a lint for words that tell the reader how to feel. The lint runs after every write to a .tex or .md file.",
   "author": {
     "name": "Jorin Overwiening"

@@ -55,3 +55,38 @@ test('missing file or no python3: silent', () => {
   assert.equal(run(path.join(work, 'gone.md')), null);
   assert.equal(run(path.join(work, 'paper.tex'), { PATH: '/nonexistent' }), null);
 });
+
+function runBash(command, extra = {}, env = {}) {
+  const input = { session_id: 's', cwd: work, hook_event_name: 'PostToolUse', tool_name: 'Bash', tool_input: { command, ...extra }, duration_ms: 500 };
+  const r = spawnSync(process.execPath, [SCRIPT], { input: JSON.stringify(input), encoding: 'utf8', env: { ...process.env, ...env } });
+  assert.equal(r.status, 0, r.stderr);
+  return r.stdout ? JSON.parse(r.stdout) : null;
+}
+
+test('Bash: fresh .md named in the command gives context', () => {
+  fs.writeFileSync(path.join(work, 'shell.md'), HYPE);
+  const c = runBash("cat > shell.md <<'EOF'\nRemarkably, the model generalizes.\nEOF").hookSpecificOutput.additionalContext;
+  assert.match(c, /^writing-rules lint, .*shell\.md \(written through the shell\): 1 hits\n.*shell\.md:1: \[adverb\] Remarkably/);
+});
+
+test('Bash: old file only read, run_in_background, README.md, WRITING_RULES_LINT=0: nothing', () => {
+  fs.writeFileSync(path.join(work, 'old.md'), HYPE);
+  const t = new Date(Date.now() - 3600e3);
+  fs.utimesSync(path.join(work, 'old.md'), t, t);
+  assert.equal(runBash('cat old.md'), null);
+  fs.writeFileSync(path.join(work, 'bg.md'), HYPE);
+  assert.equal(runBash('cat > bg.md', { run_in_background: true }), null);
+  fs.writeFileSync(path.join(work, 'README.md'), HYPE);
+  assert.equal(runBash('cat > README.md'), null);
+  fs.writeFileSync(path.join(work, 'off.md'), HYPE);
+  assert.equal(runBash('cat > off.md', {}, { WRITING_RULES_LINT: '0' }), null);
+});
+
+test('Bash: at most 20 hit lines across files', () => {
+  fs.writeFileSync(path.join(work, 'many2.md'), 'Remarkably it works.\n'.repeat(25));
+  fs.writeFileSync(path.join(work, 'shell2.md'), HYPE);
+  const c = runBash('cat a > many2.md; cat b > shell2.md').hookSpecificOutput.additionalContext;
+  assert.equal((c.match(/\[adverb\]/g) ?? []).length, 20);
+  assert.match(c, /many2\.md \(written through the shell\): 25 hits\n/);
+  assert.match(c, /… 5 more\n\n.*shell2\.md \(written through the shell\): 1 hits\n… 1 more$/);
+});
