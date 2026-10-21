@@ -2,11 +2,7 @@
 
 Four Claude Code plugins for research work: literature search, claim checking, referee-style review and
 writing rules. They come from the agent we run in a computational neuroscience lab, and we wrote each one
-after the agent made the same mistake many times.
-
-![Bar charts: papers found by lit-search and by our previous agent search, references found with and without citation chasing, and the share of a researcher's corrections the checker caught](docs/results.png)
-
-Measured on our lab's data. Panels A and B test lit-search, panel C the checker (95 % intervals).
+after the agent made the same mistake many times. The plots are measured on our lab's own questions and corrections, and on 7 published reviews.
 
 ## Install
 
@@ -30,8 +26,10 @@ lit-search queries OpenAlex and arXiv with several phrasings, follows the refere
 best hits, and ranks the pool against the question. A small model reads the top papers in full and returns
 verbatim quotes, and code checks each quote against the paper text.
 
+![Bar charts: target papers in the top 30 for lit-search and for a keyword search ranked by Jev, and review references in the top 100 with and without citation chasing](docs/lit-search.png)
+
 - 10 of our research questions, with the 92 papers our earlier searches had cited as targets: the top 30
-  held 32 of them, our previous agent search 22. The targets came from a keyword search, which favours
+  held 32 of them, a 4-query keyword search ranked by Jev 22. The targets came from a keyword search, which favours
   this ranking.
 - 7 published reviews, with their 1204 references as targets: following citations raised the hits in the
   top 100 from 95 to 116.
@@ -43,9 +41,13 @@ verbatim quotes, and code checks each quote against the paper text.
 A second agent checks a claim against the files it came from and the project's notes. Each objection has
 to quote a file and line, and a hook looks the quote up.
 
+![Bar chart: share of 146 replayed researcher corrections caught by the agent re-reading its message, the checker without notes, and the checker with the project's notes](docs/checker.png)
+
 We replayed 146 corrections a researcher had made to our agent. The checker with notes caught 18 % of
-them, the checker without notes 5 %, and the agent re-reading its own message 6 %. Most errors still get
-through, so a clean check does not show that a claim is right.
+them, the checker without notes 5 %, and the agent re-reading its own message 6 % (95 % intervals in the
+plot). The replay ran an earlier version that got the notes pasted in and could not open files; the
+plugin's checker also reads the sources. Most errors still get through, so a clean check does not show
+that a claim is right.
 
 ## reviewers
 
